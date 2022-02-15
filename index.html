@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--boostrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--css-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!--font-awesome-->
+    <script src="https://kit.fontawesome.com/595d949b57.js" crossorigin="anonymous"></script>
+    <!--title-->
+    <title>Cotización de Prestamos </title>
+</head>
+<body>
+    <div class="container text-center py-5">
+        <div class="row">
+            <div class="col-12">
+                <h1>Calcula tu préstamo</h1>
+                <p class="py-3"> En esta sección podrás calcular un préstamo considerando el monto de dinero solicitado, numero de cuotas  la correspondiente tasa de interés…</p>
+                <div>
+                    <form action=""></form>
+                    <fieldset>
+                        <form action=""class="py-5">
+                            <h2>Ingresa las cifras correspondientes</h2>
+                            <div class="secciones">
+                                <label for="capital" class="py-3">Monto a Solicitar</label>
+                                <div class="">
+                                    <input type="text" class="ingresar" placeholder=" Ingrese el monto de dinero a solicitar" id="capital">
+                                    <i class="fa-solid fa-coins"></i>
+                                </div>
+                            </div>
+                            <div class="secciones">
+                                <label for="cuotas" class="py-3">Números de cuotas</label>
+                                <div class="">
+                                    <input type="text" class="ingresar" placeholder="Ingrese las cuotas del préstamo" id="cuotas">
+                                    <i class="fa-solid fa-calendar-days"></i>    
+                                </div>
+                            </div>
+                            <div  class="secciones">
+                                <label for="intereses" class="py-3">Tasa de interés</label>
+                                <div class="">
+                                    <input type="text" class="ingresar" placeholder="Ingrese el interés a generar" id="intereses">
+                                    <i class="fa-solid fa-percent"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="reset" class="btn btn-sucess boton">
+                            </div>  
+                        </form>
+                        <div class="pb-5 ">
+                            <button onclick="gen_table();" class="btn btn-sucess boton">Calcular</button> 
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto text-center">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>NRO</td>
+                            <td>CAPITAL</td>
+                            <td>INTERES</td>
+                            <td>IMPORTE A PAGAR</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tab">
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="ft">TOTAL</td>
+                            <td id="t1"></td>
+                            <td id="t2"></td>
+                            <td id="t3"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>
